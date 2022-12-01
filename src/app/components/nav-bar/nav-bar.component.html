@@ -1,0 +1,27 @@
+<nav>
+  <ul class="menu-cont">
+    <li class="logo">THE LOGO</li>
+    <li class="menu-data" *ngFor="let menu of allMenu">
+      <button>{{ menu }}</button>
+    </li>
+
+    <li>
+      <button (click)="showMenu = !showMenu">
+        <fa-icon *ngIf="!showMenu" class="times" [icon]="faBars"></fa-icon>
+        <fa-icon *ngIf="showMenu" class="times" [icon]="faTimes"></fa-icon>
+      </button>
+    </li>
+  </ul>
+</nav>
+<div >
+
+
+<ul
+
+  [ngClass]="showMenu ? 'active-mobile-sub-menu' : 'inactive-mobile-sub-menu'"
+>
+  <li class="menu-data-mobile" *ngFor="let menu of allMenu">
+    <button class="mobile-menu">{{ menu | uppercase }}</button>
+  </li>
+</ul>
+</div>

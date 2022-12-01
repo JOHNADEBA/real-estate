@@ -1,0 +1,18 @@
+<article *ngFor="let product of allProducts">
+    <div class="top-title">
+        <p class="all-p">{{ product.location }}</p>
+        <p class="wish">{{ product.wish | uppercase}}</p>
+
+    </div>
+  <div class="article-info">
+    <img class="image" [src]="product.main_pic" [alt]="product.real_estate" />
+    <div class="right">
+      <p  class="all-p"> {{ product.real_estate | titlecase}}</p>
+      <p class="built">Size: {{ product.size  }}&#13217;</p>
+      <p class="">Rooms: {{ product.rooms  }}</p>
+      <p class="built">Built: {{ product.year | date: "y" }}</p>
+      <p >Floor: {{ product.floor  }}</p>
+      <p class="price">{{ product.price | currency }}</p>
+    </div>
+  </div>
+</article>

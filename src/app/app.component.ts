@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {allHouses} from '../assets/data'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'realEstate';
+  allProducts: any
+
+  
+  ngOnInit(): void {
+    
+    this.allProducts = allHouses
+    // this.allProducts = [allHouses]
+    
+  }
 }
